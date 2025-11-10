@@ -1,0 +1,12 @@
+For reviewing and learn
+
+1. installed opencv-python package, otherwise the cv2 package will show it's not installed
+
+2. cv2 package Handles all the complex mathematical operations required to understand what's on the screen,
+和image processing选修上面是类似的, 比如cv2.cvtColor(), cv2.imread(), cv2.matchTemplate()等等
+
+3. numpy作用是: Since images are just massive arrays of numbers (pixel color values),
+ NumPy is crucial for handling them quickly. OpenCV operations are optimized to run on NumPy arrays,
+  making image processing much faster than standard Python lists.
+
+4.pyautogui就是模拟鼠标移动,点击,以及识别screenshot
