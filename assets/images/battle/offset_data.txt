@@ -1,0 +1,4 @@
+offset for different icons:
+
+acquire_gift.png: x_offset=-90, y_offset=270
+select_reward_card.png: x_offset=190, y_offset=300
