@@ -43,7 +43,7 @@ class Controller:
         time.sleep(0.1)
 
     @staticmethod
-    def find_element(template_path, threshold=0.8, bbox=None, model="clam"):
+    def find_element(template_path, threshold=0.8, bbox=None, model="focused"):
         """
         Locates UI elements using hybrid strategy: 1. Template matching(speed) 2. Feature Matching(Robustness)
         """
@@ -94,7 +94,7 @@ class Controller:
         return None
 
     @staticmethod
-    def click_element(template_path, y_offset=0, x_offset=0, y_bias=-25, x_bias=-15, bbox=None, model='clam'):
+    def click_element(template_path, y_offset=0, x_offset=0, y_bias=-25, x_bias=-15, bbox=None, model="focused"):
         """
         Method that finds the element and clicks if found.
 
