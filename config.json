@@ -1,0 +1,70 @@
+{
+    "global_settings": {
+        "target_runs": 10,
+        "active_index": 0
+    },
+    "team_queue": [
+        {
+            "team_set_name": "Poise",
+            "team_description": "",
+            "team_preference": "teams#3",
+            "buff_preference": [
+                "buff1",
+                "buff2",
+                "buff3",
+                "buff4",
+                "buff5",
+                "buff6"
+            ],
+            "gift_preference": "gift6",
+            "skill_preference": "skill_type3",
+            "reward_preference": [
+                "reward2",
+                "reward1",
+                "reward3",
+                "reward4"
+            ],
+            "road_strategy": "priority",
+            "identity_preference": [
+                "sinner#6",
+                "sinner#7",
+                "sinner#4",
+                "sinner#3",
+                "sinner#5",
+                "sinner#10",
+                "sinner#12"
+            ]
+        },
+        {
+            "team_set_name": "Burn",
+            "team_description": "",
+            "team_preference": "teams#1",
+            "buff_preference": [
+                "buff1",
+                "buff2",
+                "buff3",
+                "buff4",
+                "buff5",
+                "buff6"
+            ],
+            "gift_preference": "gift1",
+            "skill_preference": "skill_type3",
+            "reward_preference": [
+                "reward2",
+                "reward1",
+                "reward3",
+                "reward4"
+            ],
+            "road_strategy": "fallback",
+            "identity_preference": [
+                "sinner#5",
+                "sinner#10",
+                "sinner#12",
+                "sinner#1",
+                "sinner#2",
+                "sinner#8",
+                "sinner#11"
+            ]
+        }
+    ]
+}
