@@ -47,9 +47,9 @@ class DungeonRunStateManager:
         self.is_battle_state = get_asset_path("images/battle/standby_phase_1.png")
         self.bbox_battle_state = (10, 56, 170, 182)
 
-        # "Skip" icon
-        self.is_event_state = get_asset_path("images/mirror_dungeon/event/event_skip.png")
-        self.bbox_event_state = (837, 459, 965, 526)
+        # "EGO Gift" icon
+        self.is_event_state = get_asset_path("images/mirror_dungeon/event/ego_gift_icon.png")
+        self.bbox_event_state = (38, 47, 131, 129)
 
         # "Shop" icon
         self.is_shop_state = get_asset_path("images/mirror_dungeon/shop/shop.png")

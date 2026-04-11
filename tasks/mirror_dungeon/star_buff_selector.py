@@ -75,7 +75,7 @@ class StarBuffSelector:
         else:
             logger.warning(f"Failed to select all preferred star buffs, ({selected_count}/{target_count} selected.)")
             self.proceed_to_enter()
-            return False
+            return True
 
 
 if __name__ == '__main__':

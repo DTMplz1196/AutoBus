@@ -8,7 +8,7 @@ import cv2
 import os
 from utils.vision import Vision
 
-ICON_AREA = (872, 724, 1050, 769)
+ICON_AREA = (1614, 966, 1788, 1043)
 
 
 def crop_asset(output_name="cropped_icon.png"):

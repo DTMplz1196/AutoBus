@@ -48,11 +48,11 @@ class Team_Selector:
                 continue
 
             # Check for different assets for different team preference focusing only sidebar area
-            if Controller.click_element(team_path, bbox=self.bbox_team_sidebar):
+            if Controller.click_with_retry(team_path, bbox=self.bbox_team_sidebar):
                 logger.info(f"Team detected: {team_preference}. Selecting...")
                 time.sleep(0.1)
                 logger.info("Team selected, confirming...")
-                Controller.click_element(self.teams_confirm)
+                Controller.click_with_retry(self.teams_confirm)
                 time.sleep(2)
                 # Wait for level window drops down and click offsets based on anchor(eventually clicks confirm)
                 # Avoid clicking similar confirm btn at the same interface, can also be done with bbox

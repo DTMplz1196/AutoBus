@@ -17,7 +17,7 @@ class ThemePackSelector:
             "hard": [get_asset_path(f"images/mirror_dungeon/theme_pack/hard/hard_{i}.png") for i in range(1, 23)],
         }
         self.is_theme_pack_selection_state = get_asset_path("images/mirror_dungeon/theme_pack/pack_search.png")
-        self.bbox_theme_pack_acre = (121, 253, 1773, 988)
+        self.bbox_theme_pack_area = (121, 253, 1773, 988)
         self.bbox_state = (171, 60, 394, 153)
 
     def drag_to_enter(self, pack_path):
@@ -25,7 +25,7 @@ class ThemePackSelector:
         Clicks the selected pack and drags it down to confirm entry.
         """
 
-        coor = Controller.find_element(pack_path, bbox=self.bbox_theme_pack_acre)
+        coor = Controller.find_element(pack_path, bbox=self.bbox_theme_pack_area)
 
         if coor:
             # Validate environment here, so we can use pyautogui directly without
@@ -56,7 +56,7 @@ class ThemePackSelector:
 
         for rank in ["easy", "medium", "hard"]:
             for pack_path in self.packs[rank]:
-                if Controller.find_element(pack_path, bbox=self.bbox_theme_pack_acre):
+                if Controller.find_element(pack_path, bbox=self.bbox_theme_pack_area):
                     logger.info(f"Identified {rank} pack.")
                     return self.drag_to_enter(pack_path)
 

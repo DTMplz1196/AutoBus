@@ -156,7 +156,6 @@ class Vision(metaclass=SingletonMeta):
 
         Automatically handles out-of-bounds coordinates by padding with black pixels.
         Critical for UI elements on screen edges.
-
         """
         # Convert coordinates to integers
         x1, y1, x2, y2 = map(int, map(round, area))

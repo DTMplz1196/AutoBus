@@ -52,7 +52,7 @@ class Enter_Mirror_Dungeon:
                 if Controller.find_element(self.is_home_state):
                     logger.info("At home page, clicking Drive.")
                     # Add bbox to scan only a specific area to avoid similar button noise, also for performance
-                    Controller.click_element(self.drive_unpressed, bbox=self.bbox_drive_btn)
+                    Controller.click_with_retry(self.drive_unpressed, bbox=self.bbox_drive_btn)
                     step = 1
                     continue
 
@@ -65,18 +65,18 @@ class Enter_Mirror_Dungeon:
                 # Check if sidebar of mirror dungeon interface exists, if exits, clicks enter and proceed to step 2
                 elif Controller.find_element(self.is_mirror_dungeon_state):
                     logger.info("Already in mirror dungeon interface, clicking Enter.")
-                    Controller.click_element(self.enter_btn)
+                    Controller.click_with_retry(self.enter_btn)
                     step = 2
                     continue
 
             # State where we head to drive btn pressed interface
             elif step == 1:
                 # Execute procedural actions to enter Mirror Dungeon, then proceeds to step2
-                if Controller.click_element(self.mirror_dungeon_icon, bbox=self.bbox_mirror_dungeon_icon):
+                if Controller.click_with_retry(self.mirror_dungeon_icon, bbox=self.bbox_mirror_dungeon_icon):
                     logger.info("Clicking mirror dungeon icon and enter.")
                     # Waiting 2 sec for the slashing animation ended
                     time.sleep(2)
-                    Controller.click_element(self.enter_btn)
+                    Controller.click_with_retry(self.enter_btn)
                     step = 2
                     continue
 
@@ -85,7 +85,7 @@ class Enter_Mirror_Dungeon:
                 # Confirm enter and return True, pipeline finished
                 if Controller.find_element(self.confirm_enter):
                     logger.info("Confirming Enter...")
-                    Controller.click_element(self.confirm_enter)
+                    Controller.click_with_retry(self.confirm_enter)
                     logger.info("Mirror dungeon entered.")
                     return True
 

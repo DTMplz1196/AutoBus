@@ -61,9 +61,9 @@ def find_coordinates():
                 cv2.imshow("Coordinate Finder", display_img)
 
                 print(f"\n--- Resulting ICON_AREA ---")
-                print(f"Template/Crop Area: ({min_x}, {min_y}, {max_x}, {max_y})")
+                print(f"Template/Crop Area: ({abs_min_x}, {abs_min_y}, {abs_max_x}, {abs_max_y})")
                 # For locating bbox
-                print(f"For bbox: ({abs_min_x}, {abs_min_y}, {abs_max_x}, {abs_max_y})")
+                print(f"For bbox: ({min_x}, {min_y}, {max_x}, {max_y})")
 
     cv2.namedWindow("Coordinate Finder", cv2.WINDOW_NORMAL)
     cv2.setMouseCallback("Coordinate Finder", click_event)

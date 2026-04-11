@@ -62,7 +62,7 @@ The Controller impersonate user's input:
 ### Execution
 To start the graphical interface, run the following command from the project root:
 ```powershell
-uv run streamlit run module/ui/gui.py
+    uv run streamlit run module/ui/gui.py
 ```
 
 
